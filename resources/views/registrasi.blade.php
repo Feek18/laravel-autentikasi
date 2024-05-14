@@ -14,19 +14,19 @@
             @if (session('error'))
                 <div class="alert alert-danger">{{ session('error') }}</div>
             @endif
-            <div class="card" style="width: 75%">
-                <div class="d-flex align-items-center gap-4">
-                    <div class="col-md-6">
-                        <img src="https://images.unsplash.com/photo-1509587584298-0f3b3a3a1797?q=80&w=1913&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 100%; height: 500px;" alt="">
+            <div class="card" style="width: 100%;">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="col-md-6" style="height: 100%;">
+                        <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width: 550px; height: 100%;" alt="">
                     </div>
-                    <div class="col-md-5 p-3">
-                        <h1 class="fw-bold fs-2">Form Daftar</h1>
-                        <p>Create your account please!</p>
+                    <div class="col-md-6 p-4">
+                        <h1 class="fw-bold fs-2 text-center">Form Daftar</h1>
+                        <p class="text-center">Create your account please!</p>
                         <form action="{{ route('register_user') }}" method="POST">
                             @csrf
                             <div class="mb-2">
                                 <label for="nama" class="form-label">Nama</label>
-                                <input type="text" name="nama" id="nama" class="form-control">
+                                <input type="text" placeholder="Masukan Nama Kamu" name="nama" id="nama" class="form-control">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="email">Email Address</label>
@@ -44,11 +44,11 @@
                             </div>
                             <div class="mb-2">
                                 <label for="gender" class="form-label">Gender</label>
-                                <input type="text" name="gender" id="gender" class="form-control">
+                                <input type="text" placeholder="Masukan Gender Kamu" name="gender" id="gender" class="form-control">
                             </div>
                             <div class="mb-2">
                                 <label for="umur" class="form-label">Umur</label>
-                                <input type="text" name="umur" id="umur" class="form-control">
+                                <input type="text" placeholder="Masukan Umur Kamu" name="umur" id="umur" class="form-control">
                             </div>
                             <div class="mb-2">
                                 <label for="tgl_lahir" class="form-label">Tanggal Lahir</label>
@@ -56,7 +56,7 @@
                             </div>
                             <div class="mb-2">
                                 <label for="alamat" class="form-label">Alamat</label>
-                                <input type="text" name="alamat" id="alamat" class="form-control">
+                                <input type="text" placeholder="Masukan Alamat Kamu" name="alamat" id="alamat" class="form-control">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="role">Role</label>
@@ -69,7 +69,7 @@
                                     <div class="text-danger mt-2">{{ $message }}</div>
                                 @enderror
                             </div>
-                            <button class="btn btn-primary py-1 px-4" type="submit">Daftar</button>
+                            <button class="btn btn-primary py-1 px-4 w-100" type="submit">Daftar</button>
                         </form>                        
                     </div>
                 </div>  
